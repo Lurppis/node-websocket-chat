@@ -12,7 +12,7 @@
 ## Description
 
 > Node-socket.io chat application.
-> A program that allow browser to connect to server and send message to other users.
+> A program that allow client to connect to server and send message to other users in real-time.
 
 ## Code Samples
 
