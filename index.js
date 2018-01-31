@@ -21,4 +21,9 @@ io.on('connection', (socket) => {
 	socket.on('send-chat-to-server', (data) => {
 		io.sockets.emit('send-chat-to-client', data);
 	});
+
+	// Listen for typing
+	socket.on('typing', (data) => {
+		socket.broadcast.emit('typing', data);
+	});
 });
