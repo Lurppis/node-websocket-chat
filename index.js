@@ -17,4 +17,8 @@ var io = socket(server);
 // Server listen for connection
 io.on('connection', (socket) => {
 	console.log('Made socket connection', socket.id);
+
+	socket.on('send-chat-to-server', (data) => {
+		io.sockets.emit('send-chat-to-client', data);
+	});
 });
